@@ -8,3 +8,4 @@
 <view class="objectView">
 <view class="tvNetWorkType">{{netWorkType}}</view>
 </view>
+<view></view>
