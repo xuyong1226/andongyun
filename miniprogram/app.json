@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/login/login",
+    "pages/main/main",
+    "pages/cooperation/cooperation",
+    "pages/weather/weather",
+    "pages/index/index",
+    "pages/getOpenId/index",
+    "pages/getMiniProgramCode/index",
+    "pages/deployService/index",
+    "pages/createCollection/index",
+    "pages/uploadFile/index",
+    "pages/selectRecord/index",
+    "pages/updateRecord/index",
+    "pages/updateRecordResult/index",
+    "pages/updateRecordSuccess/index",
+    "pages/sumRecord/index",
+    "pages/sumRecordResult/index"
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "/accets/icon/icons8_home_24px.png",
+        "selectedIconPath": "/accets/icon/icons8_home_24px_1.png"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气",
+        "iconPath": "/accets/icon/icons8_weather_50px.png",
+        "selectedIconPath": "/accets/icon/icons8_weather_50px_1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "合作",
+        "iconPath": "/accets/icon/icons8_handshake_heart_50px.png",
+        "selectedIconPath": "/accets/icon/icons8_handshake_heart_50px_1.png"
+      },{
+        "pagePath": "pages/login/login",
+        "text": "login",
+        "iconPath": "./accets/icon/icons8_login_48px.png",
+        "selectedIconPath": "./accets/icon/icons8_login_48px.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气预报定位，请放心授权"
+    }
+  }
+}

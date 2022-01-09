@@ -1,0 +1,10 @@
+<view class="swiperview">
+  <swiper class="swipertitle">
+    <swiper-item class="swiperitem">
+      <image src="{{swiperimage}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="objectView">
+<view class="tvNetWorkType">{{netWorkType}}</view>
+</view>

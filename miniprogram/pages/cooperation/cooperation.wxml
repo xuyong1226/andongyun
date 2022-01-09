@@ -1,0 +1,26 @@
+<!--miniprogram/pages/fb/fb.wxml-->
+<view class='pages'>
+ <view class='top'><text class='top_name'>回单图片:</text></view>
+ <!-- 图片 -->
+ <view class="images_box">
+  <block wx:key="imgbox" wx:for="{{imgbox}}">
+   <view class='img-box'>
+    <image class='img' src='{{item}}'></image>
+    <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+     <image class='img' src='../../accets/icon/icons8_delete_16px.png'></image>  
+    </view>
+   </view>
+  </block>
+  <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+   <image class='img' src='../../accets/icon/icons8_add_camera_30px.png'></image>  
+  </view>
+ </view>
+ <button bindtap='fb'>上传图片</button>
+ <!--发送卡片，title很重要，作为触发器关键-->
+ <button open-type="contact" bindcontact="handleContact" show-message-card="true" send-message-title="自定义标题" send-message-img="" send-message-path='../main/main'>联系客服</button>
+</view>
+
+user界面
+<view>用户名：
+<text class="">{{nickName}}</text>
+</view>

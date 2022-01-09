@@ -1,0 +1,28 @@
+.swiperview{
+width: 95%;
+height: auto;
+
+}
+.swipertitle{
+  width: 95%;
+  height: auto;
+}
+.swiperitem{
+  width: 95%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.title {
+  display: flex;
+  background-color: slategray;
+  justify-content: space-around;
+}
