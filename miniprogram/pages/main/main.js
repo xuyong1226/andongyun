@@ -1,23 +1,39 @@
 var _this
 const netUtils = require('../../netWork/NetUtils');
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    indicatordots: true,
+    autoplay: true,
+    indicatorcolor: '',
+    indicatoractivecolor: '#ffccff',
+    circular: true,
+    easing: 'easeInOutCubic',
     netWorkType: '监听中...',
+    swiperimage: [
+      '../../accets/image/VCG211266077604.jpg',
+      '../../accets/image/veer-300398630.jpg',
+      '../../accets/image/veer-300639713.jpg'
+    ],
+    imageurl:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    swiperimage: [
-      '../../accets/image/VCG211266077604.jpg',
-      '../../accets/image/veer-300398630.jpg',
-      '../../accets/image/veer-300639713.jpg'
-    ]
+const db = wx.cloud.database()
+db.collection('images').get({
+  success:res=> {
+    console.log(res.data)
+    this.setData({
+      imageurl:res.data,
+    })
+  },
+  fail:console.error
+})
   },
 
   /**
@@ -42,7 +58,7 @@ Page({
       }
     })
 
-    
+
   },
 
   /**
@@ -76,7 +92,20 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function (res) {
+    return {
+      title: '自定义分享标题',      
+      desc: '自定义分享描述',      
+      path: '/page/user?id=123',
+      success: function(res) {
+        console.log(res, "转发成功")
+      },
+      fail: function(res) {
+        console.log(res, "转发失败")
+      }
+    }
+  },
+  onShareTimeline: function () {
+    
+  },
 })

@@ -1,11 +1,12 @@
 <view class="swiperview">
-  <swiper class="swipertitle">
+  <swiper class="swipertitle" indicator-dots="{{indicatordots}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}" autoplay="{{autoplay}}" circular="{{circular}}" current="index" easing-function="{{easing}}">
+  <block wx:for="{{imageurl}}" wx:key="item">
     <swiper-item class="swiperitem">
-      <image src="{{swiperimage}}"></image>
+      <image class="swiperima" src="{{item.fileID}}" mode="widthFix"/>
     </swiper-item>
+  </block>
   </swiper>
 </view>
 <view class="objectView">
-<view class="tvNetWorkType">{{netWorkType}}</view>
+  <view class="tvNetWorkType">{{netWorkType}}</view>
 </view>
-<view></view>
