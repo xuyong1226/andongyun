@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "安东供应链",
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+  }
 }

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    netWorkType: '监听中...'
+    netWorkType: '监听中...',
   },
 
   /**

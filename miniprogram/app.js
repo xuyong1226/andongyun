@@ -46,5 +46,5 @@ App({
       // 新版本下载失败
       console.log("shibai")
     })
-  }
+  },
 });
